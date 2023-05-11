@@ -8,6 +8,13 @@ package it.unipd.mtss;
 public class IntegerToRoman {
 
     public static String convert(int number) {
+        if(number <= 0) {
+            // Non abbiamo usato un'eccezione perché non sapevamo se potevamo
+            // modificare la firma del metodo visto che quest'ultima era
+            // stata definita nella consegna.
+            return null;
+        }
+
         String[] romanNums = { "M", "CM", "D", "CD", "C", "XC", "L",
                 "XL", "X", "IX", "V", "IV", "I" };
         int[] arabicNums = { 1000, 900, 500, 400, 100,
