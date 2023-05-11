@@ -1,11 +1,22 @@
 package it.unipd.mtss;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 import org.junit.Test;
 
 public class IntegerToRomanTest 
 {
+    @Test
+    public void testConvertNumber_with0() {
+        assertNull(IntegerToRoman.convert(0));
+    }
+
+    @Test
+    public void testConvertNegativeNumber_with12() {
+        assertNull(IntegerToRoman.convert(-12));
+    }
+
     @Test
     public void testConvertNumber_with1()
     {
